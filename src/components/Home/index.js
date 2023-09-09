@@ -9,7 +9,7 @@ import './index.scss'
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
-  const nameArray = [' ','P', 'r', 'a', 'n', 's', 'h', 'a' , 'v']
+  const nameArray = [' ', 'P', 'r', 'a', 'n', 's', 'h', 'a', 'v']
   const jobArray = [
     'w',
     'e',
@@ -60,7 +60,16 @@ const Home = () => {
               idx={22}
             />
           </h1>
-          <h2>Full Stack Developer / </h2>
+          <h2>Frontend Developer</h2>
+          <a
+            href="https://drive.google.com/file/d/1wXqXSQiLcPB-Xh7yoLToMudZvzcPRhXA/view?usp=sharing"
+            className="flat-button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RESUME
+          </a>
+          
           <Link to="/contact" className="flat-button">
             CONTACT ME
           </Link>
