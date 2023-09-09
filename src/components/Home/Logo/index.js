@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import './index.scss'
 import TiltCard from '../../Tiltcard/TiltCard'
 
