@@ -21,7 +21,6 @@
     "react-leaflet": "^3.2.5",
     "react-loaders": "^3.0.1",
     "react-router-dom": "^6.2.2",
-    "react-scripts": "5.0.0",
     "sass": "^1.49.9",
     "TagCloud": "^2.3.2",
     "vanilla-tilt": "^1.8.0",
@@ -50,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
   }
 }
