@@ -16,13 +16,11 @@
   }
   
   .card-image {
-    grid-area: image;
-    overflow:hidden;
-    height: 220px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-size: cover;
-    // border-radius: 10px;
+    grid-area: image; /* Assign the image to the "image" grid area */
+    object-fit:contain;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden; /* Prevent image overflow */
   }
   
   .card-text {
@@ -92,11 +90,8 @@
     }
   }
   
-  /*card2*/
-  .card-image {
-    background: #fff;
-    background-size: cover;
-  }
+  
+
   
   .card-text .date {
     color: rgb(255, 255, 255);

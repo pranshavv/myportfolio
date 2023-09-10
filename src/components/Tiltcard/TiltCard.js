@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import VanillaTilt from 'vanilla-tilt';
 import './TiltCard.scss';
-import profile from '../../assets/images/pransahvv.jpg'
+import profile from '../../assets/images/Firefly 20230910124325.png'
 const TiltCard = () => {
   useEffect(() => {
     const tiltElements = document.querySelectorAll('.tilt-card');
