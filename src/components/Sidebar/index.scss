@@ -1,5 +1,5 @@
 .nav-bar {
-  background: #181818;
+  background: #ffffff;
   width: 80px;
   height: 100%;
   position: absolute;
@@ -46,7 +46,7 @@
       }
 
       &:hover {
-        color: #ffd700;
+        color: #000000;
 
         svg {
           opacity: 0;
@@ -92,13 +92,19 @@
 
     a.portfolio-link {
       &:after {
-        content: 'PORTFOLIO';
+        content: 'PROJECTS';
+      }
+    }
+    
+    a.skill-link {
+      &:after {
+        content: 'SKILLS';
       }
     }
 
     a.active {
       svg {
-        color: #ffd700;
+        color: #8109eb;
       }
     }
   }

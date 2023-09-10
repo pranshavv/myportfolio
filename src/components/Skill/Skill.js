@@ -1,6 +1,8 @@
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
+import TagCloud from 'TagCloud'
+import "./Skill.scss"
 
 const Skill = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -10,6 +12,38 @@ const Skill = () => {
       setLetterClass('text-animate-hover')
     }, 3000)
   }, [])
+
+  const TextSphere = () => {
+    useEffect(() => {
+      const container = '.tagcloud'
+      const texts = [
+        'HTML5',
+        'CSS3',
+        'SASS',
+        'JavaScript',
+        'React',
+        'MongoDB',
+        'Next',
+        'NodeJS',
+        'C++',
+        'ES6',
+        'Cloud',
+        'DSA',
+        'Express',
+        'GIT',
+        'GITHUB',
+      ]
+      const options = {
+        radius: 350,
+        maxSpeed: 'fast',
+        initSpeed: 'normal',
+        keep: true,
+      }
+      TagCloud(container, texts, options)
+    }, [])
+
+    return <div className="tagcloud" />
+  }
 
   return (
     <>
@@ -32,7 +66,7 @@ const Skill = () => {
             Computing, and Cloud Computing. These skills allow me to approach
             any project with confidence and execute it with precision.
           </p>
-          <p>
+          <p align="LEFT">
             In addition to my technical skills, I possess a range of soft skills
             that help me excel in a team environment. My problem-solving skills
             enable me to identify and overcome complex issues, while my
@@ -41,15 +75,19 @@ const Skill = () => {
             ideas clearly and effectively, whether it's with my colleagues or
             clients.
           </p>
-          <p>
+          <p align="LEFT">
             Overall, my unique combination of technical and soft skills has
             allowed me to deliver exceptional results on each project I have
             worked on. I am confident in my abilities, and I am always eager to
             take on new challenges to continue expanding my skill set.
           </p>
         </div>
-      </div> 
-    <Loader type='ball-scale-ripple-multiple'/>
+      </div>
+      <div className='sphere-cloud'>
+      <TextSphere/>
+      </div>
+      
+      <Loader type="ball-scale-ripple-multiple" />
     </>
   )
 }

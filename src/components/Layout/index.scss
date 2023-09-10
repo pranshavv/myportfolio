@@ -127,7 +127,8 @@
 
     &.contact-page,
     &.about-page,
-    &.portfolio-page {
+    &.portfolio-page, 
+    &.skill-page{
       .text-zone {
         position: initial;
         transform: none;
