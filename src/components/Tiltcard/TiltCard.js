@@ -30,10 +30,9 @@ const TiltCard = () => {
   return (
     <div className="tilt-card">
       <div className="card-image">
-        <img src={profile} alt="logo"/>
+        <img className='cardimg' src={profile} alt="logo"/>
       </div>
       <div className="card-text">
-        <span className="date">Final year Student</span>
         <h2 className='naam'>Pranshav Vikram</h2>
         <p>
         I'm a final-year student who's proficient in Java, C++ and has intermediate-level web development skills,

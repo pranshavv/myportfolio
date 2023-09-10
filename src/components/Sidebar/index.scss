@@ -60,6 +60,7 @@
       &:after {
         content: '';
         font-size: 9px;
+        font-weight: bold;
         letter-spacing: 2px;
         position: absolute;
         bottom: 0;
@@ -104,7 +105,7 @@
 
     a.active {
       svg {
-        color: #8109eb;
+        color: #a641ff;
       }
     }
   }
@@ -130,7 +131,7 @@
 
       &:hover {
         .anchor-icon {
-          color: #ffd700;
+          color:#a641ff;
         }
       }
     }

@@ -128,7 +128,7 @@
     &.contact-page,
     &.about-page,
     &.portfolio-page, 
-    &.skill-page{
+    &.skill-page {
       .text-zone {
         position: initial;
         transform: none;
@@ -162,4 +162,7 @@
     height: 0%;
     overflow: visible;
   }
+
+  
 }
+

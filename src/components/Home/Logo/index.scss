@@ -36,3 +36,12 @@
   stroke: #ffd700;
   stroke-width: 10;
 }
+
+@media screen and (max-width: 1200px) {
+  .logo-container{
+      position: initial;
+      width: 100%;
+      height: 0%;
+      overflow: visible;
+  }
+}

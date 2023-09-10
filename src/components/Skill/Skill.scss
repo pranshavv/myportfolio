@@ -24,10 +24,22 @@ width: 50%;
 
 /* Change color of each text in sphere on hover   */
 .tagcloud--item {
-    color: #00ffffff;
+    color: #ac12ff;
     text-transform: uppercase;
+    
 }
 
 .tagcloud--item:hover {
-    color: #ff6347;
+    color: #ac12ff;
+    text-shadow: 0 0 5px rgba(177, 129, 255, 0.5); 
+    
+}
+
+@media screen and (max-width: 1200px) {
+    .sphere-cloud{
+        position: initial;
+        width: 100%;
+        height: 0%;
+        overflow: visible;
+    }
 }
