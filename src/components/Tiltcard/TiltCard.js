@@ -33,26 +33,27 @@ const TiltCard = () => {
         <img src={profile} alt="logo"/>
       </div>
       <div className="card-text">
-        <span className="date">1 week ago</span>
-        <h2>Post Two</h2>
+        <span className="date">Final year Student</span>
+        <h2 className='naam'>Pranshav Vikram</h2>
         <p>
-          Hi mai hu pranshav vikram jo ki sexy hu
+        I'm a final-year student who's proficient in Java, C++ and has intermediate-level web development skills,
+        and who is passionate about software development and data structures and algorithms.
         </p>
       </div>
       <div className="card-stats">
         <div className="stat">
           <div className="value">
-            7<sup>m</sup>
+            8.7
           </div>
-          <div className="type">read</div>
+          <div className="type">CGPA</div>
         </div>
         <div className="stat border">
-          <div className="value">7152</div>
-          <div className="type">views</div>
+          <div className="value"></div>
+          <div className="type"></div>
         </div>
         <div className="stat">
-          <div className="value">21</div>
-          <div className="type">comments</div>
+          <div className="value">200+</div>
+          <div className="type">DSA Problems</div>
         </div>
       </div>
     </div>
