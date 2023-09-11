@@ -36,7 +36,7 @@
 
         .content {
             position: absolute;
-            width: 100%;
+            width: 95%;
             z-index: 3;
             padding: 10px 20px;
             transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -51,17 +51,19 @@
         .title {
             margin-bottom: 0;
             margin-top: 0;
+            margin-left: 0;
             color: #fff;
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 500;
             line-height: 24px;
         }
 
         .description {
-            font-size: 14px;
+            font-size: 15px;
             margin-bottom: 5px;
             color: #fff;
             font-weight: 700;
+            
         }
 
         .btn {
@@ -88,7 +90,7 @@
 
         &:after {
             content: "";
-            background: linear-gradient(180deg, #ffd700, #000);
+            background: linear-gradient(180deg, #d344ff, #000);
             position: absolute;
             left: 0;
             right: 0;

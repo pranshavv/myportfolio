@@ -3,12 +3,13 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 
 import './index.scss'
-import { getDocs, collection } from 'firebase/firestore/lite'
-import { db } from '../../firebase'
+// import { getDocs, collection } from 'firebase/firestore/lite'
+// import { db } from '../../firebase'
+import portfolioData from "../../data/portfolio.json"
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  const [portfolio, setPortfolio] = useState([])
+  // const [portfolio, setPortfolio] = useState([])
   useEffect(() => {
     const timer = setTimeout(() => {
       setLetterClass('text-animate-hover')
@@ -19,15 +20,15 @@ const Portfolio = () => {
     }
   })
 
-  useEffect(() => {
-    getPortfolio()
-  })
+  // useEffect(() => {
+  //   getPortfolio()
+  // })
 
-  const getPortfolio = async () => {
-    const querysnapshot = await getDocs(collection(db, 'portfolio'))
-    setPortfolio(querysnapshot.docs.map((doc) => doc.data()))
-  }
-  console.log(portfolio)
+  // const getPortfolio = async () => {
+  //   const querysnapshot = await getDocs(collection(db, 'portfolio'))
+  //   setPortfolio(querysnapshot.docs.map((doc) => doc.data()))
+  // }
+  // console.log(portfolio)
 
   const renderPortfolio = (portfolio) => {
     return (
@@ -41,7 +42,7 @@ const Portfolio = () => {
                 alt="portfolio"
               />
               <div className="content">
-                <p className="title">{port.name}</p>
+                <p className="title">{port.title}</p>
                 <h4 className="description">{port.description}</h4>
                 <button className="btn" onClick={() => window.open(port.url)}>
                   View
@@ -63,7 +64,7 @@ const Portfolio = () => {
             idx={15}
           />
         </h1>
-        <div>{renderPortfolio(portfolio)}</div>
+        <div>{renderPortfolio(portfolioData.portfolio)}</div>
       </div>
       <Loader type="pacman" />
     </>

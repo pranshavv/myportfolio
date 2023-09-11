@@ -1,24 +1,16 @@
 {
     "portfolio": [
         {
-            "cover": "/food.png",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest",
-            "url": "http://google.com"
+            "image": "/portfolio/2/bilteblast.png",
+            "title": "It is a food delivery web application with feature like add to cart, cheackout etc",
+            "url": "https://github.com/pranshavv/Bite-Blast-webapp"
         },
         
         {
-            "cover": "/food.png",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest",
-            "url": "http://google.com"
-        },
-        
-        {
-            "cover": "/food.png",
-            "title": "GGWP",
-            "description": "React, JSX, Tailwind, Jest",
-            "url": "http://google.com"
+            "image": "/portfolio/1/campusPost.png",
+            "title": "Campus Post",
+            "description": "A clubs management website for college student",
+            "url": "https://github.com/gaurbprajapati/Campus-post"
         }
     ]
 }
