@@ -42,4 +42,7 @@ width: 50%;
         height: 0%;
         overflow: visible;
     }
+    .tagcloud {
+        font-size: 1em; /* Decrease the font size to reduce the sphere's radius */
+      }
 }

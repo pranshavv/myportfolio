@@ -17,20 +17,16 @@
   
   .card-image {
     grid-area: image; /* Assign the image to the "image" grid area */
-    
-    border-radius: 2px;
+    border-top-left-radius: 17px;
+    border-top-right-radius: 17px;
+    background: url("../../assets/images/todoroki.jpeg");
+    background-size: contain;
     width: 100%; /* Change this to 100% */
-    height: 100%; /* Change this to 100% */
-    overflow: hidden; /* Prevent image overflow */
+    height: 450px; /* Change this to 100% */
+    overflow: hidden;
+     /* Prevent image overflow */
   }
 
-  .cardimg{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  
   .card-text {
     grid-area: text;
     margin: 20px;

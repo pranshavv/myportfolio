@@ -2,7 +2,7 @@ import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
 import { useEffect, useState } from 'react'
 import TagCloud from 'TagCloud'
-import "./Skill.scss"
+import './Skill.scss'
 
 const Skill = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -57,36 +57,29 @@ const Skill = () => {
             />
           </h1>
           <p>
-            As a MERN stack web developer, I bring a wealth of technical
-            expertise to the table. With a strong focus on front-end
-            development, I have a keen eye for detail and a natural sense of
-            creativity that allows me to deliver visually stunning and highly
-            functional web applications. My skill set includes Java, JavaScript,
-            Bootstrap, ReactJS, jQuery, Node.js, Sass, Express.js, Google Cloud
-            Computing, and Cloud Computing. These skills allow me to approach
-            any project with confidence and execute it with precision.
+            As a final year student proficient in Java and intermediate-level
+            web development skills, I bring a passion for software development
+            and a natural aptitude for coding. I am always eager to take on new
+            challenges and push my limits, which fuels my creativity and drive.
+            My skills include proficiency in Java, HTML5, JavaScript, and CSS,
+            as well as experience with frameworks like React.js. I am a team
+            player, adaptable to different development environments and
+            projects, and constantly strive for improvement.
           </p>
           <p align="LEFT">
-            In addition to my technical skills, I possess a range of soft skills
-            that help me excel in a team environment. My problem-solving skills
-            enable me to identify and overcome complex issues, while my
-            leadership skills allow me to guide my team towards achieving our
-            goals. My communication skills also ensure that I can articulate my
-            ideas clearly and effectively, whether it's with my colleagues or
-            clients.
-          </p>
-          <p align="LEFT">
-            Overall, my unique combination of technical and soft skills has
-            allowed me to deliver exceptional results on each project I have
-            worked on. I am confident in my abilities, and I am always eager to
-            take on new challenges to continue expanding my skill set.
+            Additionally, I have knowledge of cloud computing, specifically
+            Google Cloud Platform (GCP), making me well-rounded and capable of
+            leveraging cloud technologies in web development projects. Overall,
+            I believe that my skills, passion, and motivation make me a valuable
+            asset to any development team, and I am confident in my ability to
+            contribute to the success of a project.
           </p>
         </div>
       </div>
-      <div className='sphere-cloud'>
-      <TextSphere/>
+      <div className="sphere-cloud">
+        <TextSphere />
       </div>
-      
+
       <Loader type="ball-scale-ripple-multiple" />
     </>
   )

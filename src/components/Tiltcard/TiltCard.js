@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import VanillaTilt from 'vanilla-tilt';
 import './TiltCard.scss';
-import profile from '../../assets/images/Firefly 20230910124325.png'
+// import profile from '../../assets/images/TikTok (2).jpeg'
 const TiltCard = () => {
   useEffect(() => {
     const tiltElements = document.querySelectorAll('.tilt-card');
@@ -30,15 +30,15 @@ const TiltCard = () => {
   return (
     <div className="tilt-card">
       <div className="card-image">
-        <img className='cardimg' src={profile} alt="logo"/>
+        {/* <img className='cardimg' src={profile} alt="logo"/> */}
       </div>
-      <div className="card-text">
+      {/* <div className="card-text">
         <h2 className='naam'>Pranshav Vikram</h2>
         <p>
         I'm a final-year student who's proficient in Java, C++ and has intermediate-level web development skills,
         and who is passionate about software development and data structures and algorithms.
         </p>
-      </div>
+      </div> */}
       <div className="card-stats">
         <div className="stat">
           <div className="value">

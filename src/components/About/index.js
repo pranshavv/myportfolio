@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react'
 import {
   faAngular,
@@ -34,18 +33,22 @@ const About = () => {
             />
           </h1>
           <p>
-            I'm a very ambitious front-end developer looking for a role in an
-            established IT company with the opportunity to work with the latest
-            technologies on challenging and diverse projects.
+            Hello, I'm Pranshav, a final year student with a strong ambition for
+            front-end development and a solid foundation in MERN stack
+            development. I'm actively seeking a position in a well-established
+            IT company where I can leverage my skills and work with cutting-edge
+            technologies on a wide range of challenging projects.
           </p>
           <p align="LEFT">
-            I'm quiet confident, naturally curious, and perpetually working on
-            improving my chops one design problem at a time.
+            I approach my work with unwavering confidence, a natural curiosity,
+            and a continuous drive to enhance my design capabilities with each
+            problem I encounter.
           </p>
           <p>
-            If I need to define myself in one sentence that would be a family
-            person, father of a beautiful daughter, a sports fanatic,
-            photography enthusiast, and tech-obsessed!!!
+            If I were to define myself in a single sentence, I'd say I'm a
+            dedicated professional who thrives on solving design challenges and
+            is always eager to stay up-to-date with the latest trends and
+            technologies in the industry.
           </p>
         </div>
 
@@ -78,7 +81,6 @@ const About = () => {
 }
 
 export default About
-
 
 // import { useEffect, useState } from 'react'
 // // import {
@@ -164,7 +166,6 @@ export default About
 //           </p>
 //         </div>
 
-        
 //           <TextSphere />
 
 //       </div>
