@@ -75,12 +75,12 @@ const Skill = () => {
             contribute to the success of a project.
           </p>
         </div>
-      </div>
-      <div className="sphere-cloud">
-        <TextSphere />
+        <div className="sphere-cloud">
+          <TextSphere />
+        </div>
       </div>
 
-      <Loader type="ball-scale-ripple-multiple" />
+      <Loader type="pacman" />
     </>
   )
 }

@@ -6,7 +6,7 @@
     grid-template-areas: "image" "text" "stats";
     border-radius: 18px;
     background: rgb(36, 36, 36);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 15px rgb(0, 0, 0), 0 0 10px rgba(7, 5, 7, 0.651);
     font-family: roboto;
     text-align: center;
     cursor: pointer;
@@ -19,7 +19,7 @@
     grid-area: image; /* Assign the image to the "image" grid area */
     border-top-left-radius: 17px;
     border-top-right-radius: 17px;
-    background: url("../../assets/images/todoroki.jpeg");
+    background:url("../../assets/images/todoroki.jpeg");
     background-size: contain;
     width: 100%; /* Change this to 100% */
     height: 450px; /* Change this to 100% */
@@ -35,12 +35,7 @@
     border-radius: 5px;
     opacity: .9;
   
-    p {
-      color: white;
-      font-size: 15px;
-      font-weight: 300;
-      margin-top: 7px;
-    }
+    
   
     .naam {
       font-size: 17px;
@@ -58,7 +53,7 @@
     grid-template-rows: 1fr;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background: rgb(255, 7, 110);
+    background: rgb(255, 255, 255);
   
     .stat {
       padding: 10px;
@@ -66,7 +61,7 @@
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      color: rgb(241, 232, 232);
+      color: rgb(0, 0, 0);
   
       &.border {
         border-left: 1px solid rgb(0, 0, 0);
@@ -98,6 +93,6 @@
   }
   
   .card-stats{
-    background: rgb(164, 43, 175);
+    background: rgb(255, 255, 255);
   }
   
