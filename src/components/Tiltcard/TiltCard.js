@@ -28,7 +28,7 @@ const TiltCard = () => {
   }, []);
 
   return (
-    <div className="tilt-card">
+    <div className="tilt-card rgb">
       <div className="card-image">
         {/* <img className='cardimg' src={profile} alt="logo"/> */}
       </div>
