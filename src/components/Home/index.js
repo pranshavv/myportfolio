@@ -62,7 +62,7 @@ const Home = () => {
           </h1>
           <h2>Frontend Developer</h2>
           <a
-            href="https://drive.google.com/file/d/1wXqXSQiLcPB-Xh7yoLToMudZvzcPRhXA/view?usp=shari"
+            href=""
             className="flat-button"
             target="_blank"
             rel="noopener noreferrer"
