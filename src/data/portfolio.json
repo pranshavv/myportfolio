@@ -17,7 +17,7 @@
             "image": "/portfolio/login.png",
             "title": "TO-DO List",
             "description": "A Todo List to manage daily track your tasks",
-            "url": "http://localhost:3000/login"
+            "url": "https://todolistappusingmern.netlify.app/"
         }
     ]
 }
