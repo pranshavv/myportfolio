@@ -57,22 +57,24 @@ const Skill = () => {
             />
           </h1>
           <p>
-            As a final year student proficient in Java and intermediate-level
-            web development skills, I bring a passion for software development
-            and a natural aptitude for coding. I am always eager to take on new
-            challenges and push my limits, which fuels my creativity and drive.
-            My skills include proficiency in Java, HTML5, JavaScript, and CSS,
-            as well as experience with frameworks like React.js. I am a team
-            player, adaptable to different development environments and
-            projects, and constantly strive for improvement.
+          I am a DevOps and DBRE (Database Reliability Engineering) professional at Coforge Ltd 
+          with hands-on experience in managing and automating Oracle database environments across 
+          cloud and on-prem infrastructure. I specialize in provisioning AWS RDS (Oracle) using Terraform, 
+          automating backup and recovery processes, and enhancing database observability through tools like 
+          CloudWatch, Grafana, and Prometheus.
           </p>
-          <p align="LEFT">
-            Additionally, I have knowledge of cloud computing, specifically
-            Google Cloud Platform (GCP), making me well-rounded and capable of
-            leveraging cloud technologies in web development projects. Overall,
-            I believe that my skills, passion, and motivation make me a valuable
-            asset to any development team, and I am confident in my ability to
-            contribute to the success of a project.
+
+          <p align="left">
+            My work involves optimizing daily operations across 150+ Oracle environments—using OEM, AWR, and 
+            custom scripts to reduce manual tasks by over 60%. I've containerized schema migration workflows 
+            with Docker, implemented robust CI/CD pipelines using GitHub Actions and Jenkins, and contributed 
+            to the resilience of critical systems by managing RMAN backups and disaster recovery strategies. 
+            My expertise also spans configuring DNS with Route 53, reverse proxies like NGINX, and 
+            performance tuning through proactive space and log management.
+            With a B.Tech in Computer Science and a passion for automation, I bring a blend of development 
+            and infrastructure knowledge that enables me to design scalable, secure, and reliable systems. 
+            I'm driven by curiosity, thrive in cross-functional teams, and constantly strive to build 
+            better engineering workflows across the DevOps and data reliability stack.
           </p>
         </div>
         <div className="sphere-cloud">
