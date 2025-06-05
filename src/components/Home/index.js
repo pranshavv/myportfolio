@@ -61,9 +61,9 @@ const Home = () => {
               idx={22}
             />
           </h1>
-          <h2>Frontend Developer</h2>
+          <h2>DEVOPS / DBRE Engineer</h2>
           <a
-            href=""
+            href="https://drive.google.com/file/d/1BYY2g_ABViTl3ZA9X2ZEvaK7lwG2kuDn/view?usp=drive_link"
             className="flat-button"
             target="_blank"
             rel="noopener noreferrer"
