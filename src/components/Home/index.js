@@ -11,20 +11,21 @@ const Home = () => {
 
   const nameArray = ['  ', 'P', 'r', 'a', 'n', 's', 'h', 'a', 'v']
   const jobArray = [
-    'w',
+    'D',
     'e',
-    'b',
-    ' ',
-    'd',
-    'e',
-    'v',
-    'e',
-    'l',
+    'V',
     'o',
     'p',
+    's',
+    ' ',
+    'E',
+    'n',
+    'g',
+    'i',
+    'n',
+    'e',
     'e',
     'r',
-    '.',
   ]
 
   useEffect(() => {
