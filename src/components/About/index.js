@@ -55,23 +55,24 @@ const About = () => {
         <div className="stage-cube-cont">
           <div className="cubespinner">
             <div className="face1">
-              <FontAwesomeIcon icon={faAngular} color="#DD0031" />
+            <FontAwesomeIcon icon={faAws} color="#FF9900" /> {/* AWS */}
             </div>
             <div className="face2">
-              <FontAwesomeIcon icon={faHtml5} color="#F06529" />
+            <FontAwesomeIcon icon={faDocker} color="#0db7ed" /> {/* Docker */}
             </div>
             <div className="face3">
-              <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
+            <FontAwesomeIcon icon={faLinux} color="#FCC624" /> {/* Linux Shell / OS */}
             </div>
             <div className="face4">
-              <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+            <FontAwesomeIcon icon={faDatabase} color="#4DB33D" /> {/* Oracle / DB */}
             </div>
             <div className="face5">
-              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+            <FontAwesomeIcon icon={faGithub} color="#000000" /> {/* GitHub Actions */}
             </div>
             <div className="face6">
-              <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
+            <FontAwesomeIcon icon={faCloud} color="#00ACEE" /> {/* Cloud / Monitoring */}
             </div>
+
           </div>
         </div>
       </div>
