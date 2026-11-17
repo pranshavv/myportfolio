@@ -48,12 +48,22 @@
     grid-area: image; /* Assign the image to the "image" grid area */
     border-top-left-radius: 17px;
     border-top-right-radius: 17px;
-    background:url("../../assets/images/pranshav1.jpg");
-    background-size: contain;
-    width: 100%; /* Change this to 100% */
-    height: 450px; 
+    position: relative;
+
+    .card-photo {
+      position: absolute;
+      inset: 0;
+      background-repeat: no-repeat;
+      // Frames the rooftop photo: centred on him, medium distance
+      background-size: 160% auto;
+      background-position: 29% 100%;
+      filter: brightness(0.75);
+    }
+    width: 100%;
+    // Spans the image + (empty) text rows, stopping at the stats row
+    grid-row: 1 / 3;
+    height: 100%;
     overflow: hidden;
-     /* Prevent image overflow */
   }
 
   // .card-text {

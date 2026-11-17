@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import VanillaTilt from 'vanilla-tilt';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify } from '@fortawesome/free-brands-svg-icons';
+import photo from '../../assets/images/pransahvv1.jpg';
 import './TiltCard.scss';
 
 const SPOTIFY_URL = 'https://open.spotify.com/user/4cel17s8zttbnupom70e7unkg';
@@ -35,6 +36,7 @@ const TiltCard = () => {
   return (
     <div className="tilt-card rgb">
       <div className="card-image">
+        <div className="card-photo" style={{ backgroundImage: `url(${photo})` }} />
         {/* <img className='cardimg' src={profile} alt="logo"/> */}
       </div>
       {/* <div className="card-text">
