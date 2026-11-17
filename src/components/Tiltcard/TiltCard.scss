@@ -54,10 +54,9 @@
       position: absolute;
       inset: 0;
       background-repeat: no-repeat;
-      // Frames the rooftop photo: centred on him, medium distance
-      background-size: 160% auto;
-      background-position: 29% 100%;
-      filter: brightness(0.75);
+      // Frames the doorway photo with him on the right side
+      background-size: 140% auto;
+      background-position: 100% 30%;
     }
     width: 100%;
     // Spans the image + (empty) text rows, stopping at the stats row
