@@ -96,6 +96,20 @@
         border-left: 1px solid rgb(0, 0, 0);
         border-right: 1px solid rgb(0, 0, 0);
       }
+
+      &.spotify {
+        text-decoration: none;
+
+        .spotify-icon {
+          font-size: 26px;
+          margin-bottom: 2px;
+          transition: transform 0.2s ease-out;
+        }
+
+        &:hover .spotify-icon {
+          transform: scale(1.2);
+        }
+      }
   
       .value {
         font-size: 22px;
@@ -119,6 +133,19 @@
   
   .card-text .date {
     color: rgb(255, 255, 255);
+  }
+
+  @media screen and (max-width: 1200px) {
+    .tilt-card {
+      margin: 40px auto;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .tilt-card {
+      width: 260px;
+      grid-template-columns: 260px;
+    }
   }
   
   .card-stats{

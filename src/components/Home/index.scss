@@ -35,7 +35,7 @@
       position: absolute;
       margin-top: 18px;
       margin-left: 20px;
-      animation: fadeIn 1s 1.7s backwards;
+      animation: fadeIn 1s 0.9s backwards;
       opacity: 0.6;
     }
 
@@ -56,7 +56,39 @@
     font-size: 14px;
     font-family: sans-serif;
     letter-spacing: 3px;
-    animation: fadeIn 1s 1.8s backwards;
+    line-height: 1.6;
+    animation: fadeIn 1s 0.9s backwards;
+  }
+
+  .tagline {
+    color: #b5b5b5;
+    margin: 8px 0 0;
+    font-size: 14px;
+    font-style: italic;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    animation: fadeIn 1s 1.1s backwards;
+  }
+
+  .job-title {
+    display: inline-block;
+    font-size: 0.6em;
+    line-height: 1.1;
+    margin-top: 10px;
+
+    // Wrap between words only, never mid-word
+    .word {
+      display: inline-block;
+      white-space: nowrap;
+      margin-right: 0.3em;
+    }
+
+    // The shared 10px min-width spreads out narrow letters like i and l
+    .text-animate,
+    .text-animate-hover {
+      min-width: 0;
+    }
   }
 
   .flat-button {
@@ -71,7 +103,7 @@
     border: 1px solid #ffd700;
     margin-top: 25px;
     float: left;
-    animation: fadeInAnimation 1s 1.8s backwards;
+    animation: fadeInAnimation 1s 1s backwards;
     white-space: nowrap;
 
     &:hover {
@@ -94,8 +126,18 @@
     position: initial;
     width: 100%;
     transform: none;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
+  }
+
+  .home-page h1 {
+    font-size: 64px;
+    line-height: 1.1;
+  }
+
+  .home-page h2 {
+    letter-spacing: 1.5px;
+    line-height: 1.6;
   }
 
   .home-page .flat-button {
@@ -108,8 +150,16 @@
   .logo-container {
     position: initial;
     width: 100%;
-    height: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
     overflow: visible;
+  }
+
+  @media screen and (max-width: 480px) {
+    .home-page h1 {
+      font-size: 46px;
+    }
   }
 
   

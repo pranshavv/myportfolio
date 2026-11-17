@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -20,6 +21,11 @@ body {
 
 @media screen and (max-width: 1200px) {
   body {
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .dashboard {
+    margin: 80px 20px;
   }
 }

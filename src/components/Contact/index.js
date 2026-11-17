@@ -4,17 +4,22 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
+import { useInView } from '../Section'
 import './index.scss'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   const form = useRef()
 
+  const inView = useInView()
+
   useEffect(() => {
-    return setTimeout(() => {
+    if (!inView) return
+    const timer = setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
-  }, [])
+    return () => clearTimeout(timer)
+  }, [inView])
 
   const sendEmail = (e) => {
     e.preventDefault()
@@ -48,14 +53,10 @@ const Contact = () => {
               idx={15}
             />
           </h1>
+          <h2>Let's Connect and Create! 👋</h2>
           <p>
-            <h2>Let's Connect and Create! 👋 </h2>
-            Excited to connect with you! Got questions, ideas, or just want to
-            chat? I'm all ears! Whether you're interested in a project, want to
-            share your thoughts, or just feel like saying hi, drop me a message
-            below. <br />Your input is invaluable, and I'm thrilled to start our
-            conversation. Let's bring ideas to life and make magical things
-            happen together! 🚀🚀
+            Got questions, ideas, or an opportunity in SRE, DevOps, or cloud
+            infrastructure? Drop me a message below and I'll get back to you.
           </p>
           <div className="contact-form">
             <form ref={form} onSubmit={sendEmail}>
@@ -96,23 +97,16 @@ const Contact = () => {
         <div className="info-map">
           Pranshav Vikram,
           <br />
-          Greater Noida,
+          Bengaluru, India
           <br />
-          Hive Boys Hostel <br />
-          Knowldege Park 2 <br />
           <br />
           <span>pranshavvikram2@gmail.com</span>
         </div>
         <div className="map-wrap">
-          <MapContainer
-            center={[28.47122044429566, 77.49552323539783]}
-            zoom={13}
-          >
+          <MapContainer center={[12.9716, 77.5946]} zoom={12}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-            <Marker position={[28.47122044429566, 77.49552323539783]}>
-              <Popup>
-                Pranshav lives here, come over for a cup of coffee :)
-              </Popup>
+            <Marker position={[12.9716, 77.5946]}>
+              <Popup>Based in Bengaluru, India</Popup>
             </Marker>
           </MapContainer>
         </div>

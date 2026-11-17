@@ -13,7 +13,10 @@ const Home =()=> {
         const description = form.current[1]?.value;
         const url = form.current[2]?.value;
         const image = form.current[3]?.files[0];
-        console.log(name,description,url,image);
+        if (!image) {
+            alert('Please select an image');
+            return;
+        }
         
         const storageRef = ref(storage, `portfolio/${image.name}`);
 
@@ -63,7 +66,7 @@ const Home =()=> {
             <p><input type="text" placeholder="Url"/> </p>
             <p><input type="file" placeholder="Image"/> </p>
             <button type="submit">Submit</button>
-            <button onClick={() => auth.signOut}>Sign out</button>
+            <button type="button" onClick={() => auth.signOut()}>Sign out</button>
         </form>
         </div>
     )

@@ -1,13 +1,13 @@
 .sphere-cloud{
-width: 50%;
+  width: 50%;
   height: 100%;
   top: 0;
-  padding-top: 1%;
   position: absolute;
   right: 0;
   overflow: hidden;
-    
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;700;800;900&display=swap');
@@ -39,8 +39,11 @@ width: 50%;
     .sphere-cloud{
         position: initial;
         width: 100%;
-        height: 0%;
-        overflow: visible;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0 60px;
+        overflow: hidden;
     }
     .tagcloud {
         font-size: 1em; /* Decrease the font size to reduce the sphere's radius */

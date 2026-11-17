@@ -1,22 +1,27 @@
 {
     "portfolio": [
         {
+            "image": "/portfolio/eks.png",
+            "title": "AWS EKS Infrastructure Platform",
+            "description": "Multi-env EKS with Terraform, ArgoCD GitOps & Prometheus SLOs",
+            "url": "https://github.com/pranshavv"
+        },
+        {
             "image": "/portfolio/2/bilteblast.png",
-            "title": "It is a food delivery web application with feature like add to cart, cheackout etc",
+            "title": "Bite Blast",
+            "description": "Food delivery web app with cart and checkout",
             "url": "https://github.com/pranshavv/Bite-Blast-webapp"
         },
-        
         {
             "image": "/portfolio/1/campusPost.png",
             "title": "Campus Post",
-            "description": "A clubs management website for college student",
+            "description": "A clubs management website for college students",
             "url": "https://github.com/gaurbprajapati/Campus-post"
         },
-
         {
             "image": "/portfolio/login.png",
             "title": "TO-DO List",
-            "description": "A Todo List to manage daily track your tasks",
+            "description": "A Todo List to track your daily tasks",
             "url": "https://todolistappusingmern.netlify.app/"
         }
     ]

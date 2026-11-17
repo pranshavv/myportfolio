@@ -1,0 +1,31 @@
+.section {
+  position: relative;
+  height: 100vh;
+  min-height: 640px;
+
+  // Hold every entrance animation until the user scrolls this section into view
+  &:not(.in-view) * {
+    animation-play-state: paused !important;
+  }
+
+  &:not(#home) .loader-active {
+    display: none;
+  }
+
+  &#portfolio {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .section {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 40px;
+
+    &#portfolio {
+      min-height: auto;
+    }
+  }
+}

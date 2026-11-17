@@ -6,7 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLinkedin,
   faGithub,
-  faInstagram
+  faInstagram,
+  faSpotify,
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faHome,
@@ -17,59 +18,33 @@ import {
   faClose,
   faTools,
 } from '@fortawesome/free-solid-svg-icons'
-import { Link, NavLink } from 'react-router-dom'
 
-const Sidebar = () => {
+const Sidebar = ({ active }) => {
   const [showNav, setShowNav] = useState(false);
+  const linkClass = (id, base = '') => `${base} ${active === id ? 'active' : ''}`.trim()
 
   return (
     <div className="nav-bar">
-      <Link 
-        className="logo"
-        to="/"
-        onClick={() => setShowNav(false)}>
+      <a className="logo" href="#home" onClick={() => setShowNav(false)}>
         <img src={LogoS} alt="Logo" />
         <img className="sub-logo" src={banner} alt="Pranshav" />
-      </Link>
+      </a>
       <nav className={showNav ? 'mobile-show' : ''}>
-        <NavLink 
-          exact="true"
-          activeclassname="active"
-          to="/"
-          onClick={() => setShowNav(false)}>
+        <a href="#home" className={linkClass('home')} onClick={() => setShowNav(false)}>
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
-        </NavLink>
-        <NavLink 
-          activeclassname="active"
-          className="about-link"
-          to="/about"
-          onClick={() => setShowNav(false)}>
+        </a>
+        <a href="#about" className={linkClass('about', 'about-link')} onClick={() => setShowNav(false)}>
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
-        </NavLink>
-        <NavLink
-          activeclassname="active"
-          className="portfolio-link"
-          to="/portfolio"
-          onClick={() => setShowNav(false)}
-        >
-        <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
-        </NavLink>
-        <NavLink
-          activeclassname="active"
-          className="skill-link"
-          to="/skill"
-          onClick={() => setShowNav(false)}
-        >
-        <FontAwesomeIcon icon={faTools} color="#4d4d4e" />
-        </NavLink>
-        <NavLink
-          activeclassname="active"
-          className="contact-link"
-          to="/contact"
-          onClick={() => setShowNav(false)}
-        >
+        </a>
+        <a href="#portfolio" className={linkClass('portfolio', 'portfolio-link')} onClick={() => setShowNav(false)}>
+          <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
+        </a>
+        <a href="#skill" className={linkClass('skill', 'skill-link')} onClick={() => setShowNav(false)}>
+          <FontAwesomeIcon icon={faTools} color="#4d4d4e" />
+        </a>
+        <a href="#contact" className={linkClass('contact', 'contact-link')} onClick={() => setShowNav(false)}>
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-        </NavLink>
+        </a>
         <FontAwesomeIcon 
           onClick={() => setShowNav(false)}
           icon={faClose}
@@ -99,6 +74,20 @@ const Sidebar = () => {
           >
             <FontAwesomeIcon
               icon={faGithub}
+              color="#4d4d4e"
+              className="anchor-icon"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://open.spotify.com/user/4cel17s8zttbnupom70e7unkg"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Spotify"
+          >
+            <FontAwesomeIcon
+              icon={faSpotify}
               color="#4d4d4e"
               className="anchor-icon"
             />

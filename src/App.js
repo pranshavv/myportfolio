@@ -4,25 +4,28 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Layout from './components/Layout'
 import Portfolio from './components/Portfolio'
-// import Dashboard from './components/Dashboard'
 import './App.scss'
 import Skill from './components/Skill/Skill'
 import Dashboard from './components/Dashboard/dash'
+import Section from './components/Section'
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          //<Route path="about" element={<About />} />
-          <Route path="/skill" element={<Skill />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-        </Route>
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route
+        path="*"
+        element={
+          <Layout>
+            <Section id="home"><Home /></Section>
+            <Section id="about"><About /></Section>
+            <Section id="portfolio"><Portfolio /></Section>
+            <Section id="skill"><Skill /></Section>
+            <Section id="contact"><Contact /></Section>
+          </Layout>
+        }
+      />
+    </Routes>
   )
 }
 

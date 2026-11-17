@@ -162,8 +162,10 @@
       background: #181818;
       height: 100%;
       margin: 0;
-      z-index: 2;
+      z-index: 10;
       position: fixed;
+      padding-top: 80px;
+      box-sizing: border-box;
 
       &.mobile-show {
         display: block;
@@ -173,6 +175,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        color: #fff;
       }
 
       a:after {
@@ -184,15 +187,24 @@
 
       a svg {
         opacity: 1 !important;
+        color: #ffd700 !important;
       }
      }
 
      .hamburger-icon,
      .close-icon {
-        position: absolute;
+        position: fixed;
         top: 15px;
         right: 15px;
         display: block;
+        cursor: pointer;
+     }
+
+     .hamburger-icon {
+        z-index: 9;
+        padding: 6px;
+        border-radius: 6px;
+        background: rgba(15, 14, 23, 0.85);
      }
   }
 

@@ -1,0 +1,9 @@
+.background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  // Negative z-index keeps it behind non-positioned content on mobile too
+  z-index: -1;
+  pointer-events: none;
+}

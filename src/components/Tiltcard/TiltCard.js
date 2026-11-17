@@ -1,6 +1,11 @@
 import React, { useEffect } from 'react';
 import VanillaTilt from 'vanilla-tilt';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpotify } from '@fortawesome/free-brands-svg-icons';
 import './TiltCard.scss';
+
+const SPOTIFY_URL = 'https://open.spotify.com/user/4cel17s8zttbnupom70e7unkg';
+
 // import profile from '../../assets/images/TikTok (2).jpeg'
 const TiltCard = () => {
   useEffect(() => {
@@ -41,19 +46,23 @@ const TiltCard = () => {
       </div> */}
       <div className="card-stats">
         <div className="stat">
-          <div className="value">
-            8.7
-          </div>
-          <div className="type">CGPA</div>
+          <div className="value">SRE</div>
+          <div className="type">@ PhonePe</div>
         </div>
         <div className="stat border">
-          <div className="value"></div>
-          <div className="type"></div>
+          <div className="value">2</div>
+          <div className="type">Yrs Experience</div>
         </div>
-        <div className="stat">
-          <div className="value">200+</div>
-          <div className="type">DSA Problems</div>
-        </div>
+        <a
+          className="stat spotify"
+          href={SPOTIFY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="My Spotify profile"
+        >
+          <FontAwesomeIcon icon={faSpotify} className="spotify-icon" color="#1DB954" />
+          <div className="type">Spotify</div>
+        </a>
       </div>
     </div>
   );

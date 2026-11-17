@@ -1,58 +1,53 @@
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
+import { useInView } from '../Section'
 import { useEffect, useState } from 'react'
 import TagCloud from 'TagCloud'
 import './Skill.scss'
 
+const SKILLS = [
+  'AWS', 'Azure', 'EKS', 'Kubernetes', 'Terraform', 'ArgoCD', 'Helm',
+  'Karpenter', 'HPA', 'Docker', 'GitHub Actions', 'GitLab CI', 'Prometheus',
+  'Grafana', 'Nagios', 'CloudWatch', 'Oracle', 'PostgreSQL', 'MySQL',
+  'MS SQL Server', 'AWS RDS', 'Python', 'Bash', 'NGINX', 'Route 53',
+  'VPC', 'IAM', 'S3', 'Security Hub', 'SLI/SLO', 'GitOps',
+]
+
+// Defined outside Skill so re-renders don't remount it and spawn duplicate clouds
+const TextSphere = () => {
+  useEffect(() => {
+    // Sphere sits in the right half on desktop, full width on tablet/phone
+    const desktop = window.innerWidth > 1200
+    const available = desktop ? window.innerWidth / 2 : window.innerWidth
+    const radius = Math.min(
+      350,
+      Math.floor((available - 40) / 2),
+      desktop ? Math.floor(window.innerHeight * 0.4) : Infinity
+    )
+    const cloud = TagCloud('.tagcloud', SKILLS, {
+      radius,
+      maxSpeed: 'fast',
+      initSpeed: 'normal',
+      keep: true,
+    })
+    return () => cloud.destroy()
+  }, [])
+
+  return <div className="tagcloud" />
+}
+
 const Skill = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
 
+  const inView = useInView()
+
   useEffect(() => {
-    return setTimeout(() => {
+    if (!inView) return
+    const timer = setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
-  }, [])
-
-  const TextSphere = () => {
-    useEffect(() => {
-      const container = '.tagcloud'
-      const texts = [
-  'Database',
-  'AWS RDS',
-  'SQL',
-  'PL/SQL',
-  'RMAN',
-  'Terraform',
-  'GitHub Actions',
-  'Scripting',
-  'CloudWatch',
-  'Grafana',
-  'Prometheus',
-  'OEM',
-  'AWR Reports',
-  'Docker',
-  'NGINX',
-  'HAProxy',
-  'Jenkins',
-  'S3',
-  'IAM (AWS)',
-  'Route 53',
-  'expdp/impdp',
-  'CI/CD',
-  'Monitoring & Observability',
-  'Infrastructure as Code (IaC)'
-]
-      const options = {
-        radius: 350,
-        maxSpeed: 'fast',
-        initSpeed: 'normal',
-        keep: true,
-      }
-      TagCloud(container, texts, options)
-    }, [])
-
-    return <div className="tagcloud" />
-  }
+    return () => clearTimeout(timer)
+  }, [inView])
 
   return (
     <>
@@ -66,24 +61,24 @@ const Skill = () => {
             />
           </h1>
           <p>
-          I am a DevOps and DBRE (Database Reliability Engineering) professional at Coforge Ltd 
-          with hands-on experience in managing and automating Oracle database environments across 
-          cloud and on-prem infrastructure. I specialize in provisioning AWS RDS (Oracle) using Terraform, 
-          automating backup and recovery processes, and enhancing database observability through tools like 
-          CloudWatch, Grafana, and Prometheus.
+            At PhonePe, I provision and scale Azure Virtual Machines and build
+            highly available Azure MySQL Flexible Server clusters with
+            Terraform, using Azure Compute Gallery images to standardize
+            provisioning. I also manage production Azure infrastructure — VM
+            health, networking, proxies, and platform updates.
           </p>
-
           <p align="left">
-            My work involves optimizing daily operations across 150+ Oracle environments—using OEM, AWR, and 
-            custom scripts to reduce manual tasks by over 60%. I've containerized schema migration workflows 
-            with Docker, implemented robust CI/CD pipelines using GitHub Actions and Jenkins, and contributed 
-            to the resilience of critical systems by managing RMAN backups and disaster recovery strategies. 
-            My expertise also spans configuring DNS with Route 53, reverse proxies like NGINX, and 
-            performance tuning through proactive space and log management.
-            With a B.Tech in Computer Science and a passion for automation, I bring a blend of development 
-            and infrastructure knowledge that enables me to design scalable, secure, and reliable systems. 
-            I'm driven by curiosity, thrive in cross-functional teams, and constantly strive to build 
-            better engineering workflows across the DevOps and data reliability stack.
+            At Coforge, I migrated pre-production Oracle databases to Oracle
+            Linux 8/9, resolved a P1 incident where OS patching broke Oracle
+            primary startup, and migrated a 70 GB on-prem MySQL database to
+            Amazon RDS using binlog replication with near-zero downtime. I wrote
+            Python and Bash automation for backup validation and deployment
+            health checks.
+          </p>
+          <p>
+            On the side, I built a multi-environment EKS platform with
+            Terraform, ArgoCD (App-of-Apps), and a Prometheus-based SLI/SLO
+            framework with error-budget tracking.
           </p>
         </div>
         <div className="sphere-cloud">

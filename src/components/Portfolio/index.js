@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import Loader from 'react-loaders'
 import AnimatedLetters from '../AnimatedLetters'
+import { useInView } from '../Section'
 
 import './index.scss'
-// import { getDocs, collection } from 'firebase/firestore/lite'
-// import { db } from '../../firebase'
-import portfolioData from "../../data/portfolio.json"
+
+const TITLE = 'Blogs & Projects'.split('')
 
 const Portfolio = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
-  // const [portfolio, setPortfolio] = useState([])
+  const inView = useInView()
   useEffect(() => {
+    if (!inView) return
     const timer = setTimeout(() => {
       setLetterClass('text-animate-hover')
     }, 3000)
@@ -18,53 +19,21 @@ const Portfolio = () => {
     return () => {
       clearTimeout(timer)
     }
-  })
+  }, [inView])
 
-  // useEffect(() => {
-  //   getPortfolio()
-  // })
-
-  // const getPortfolio = async () => {
-  //   const querysnapshot = await getDocs(collection(db, 'portfolio'))
-  //   setPortfolio(querysnapshot.docs.map((doc) => doc.data()))
-  // }
-  // console.log(portfolio)
-
-  const renderPortfolio = (portfolio) => {
-    return (
-      <div className="images-container">
-        {portfolio.map((port, idx) => {
-          return (
-            <div className="image-box" key={idx}>
-              <img
-                src={port.image}
-                className="portfolio-image"
-                alt="portfolio"
-              />
-              <div className="content">
-                <p className="title">{port.title}</p>
-                <h4 className="description">{port.description}</h4>
-                <button className="btn" onClick={() => window.open(port.url)}>
-                  View
-                </button>
-              </div>
-            </div>
-          )
-        })}
-      </div>
-    )
-  }
   return (
     <>
       <div className="container portfolio-page">
         <h1 className="page-title">
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={['P', 'r', 'o', 'j', 'e', 'c','t','s']}
-            idx={15}
-          />
+          <AnimatedLetters letterClass={letterClass} strArray={TITLE} idx={15} />
         </h1>
-        <div>{renderPortfolio(portfolioData.portfolio)}</div>
+        <div className="coming-soon">
+          <span className="badge">Coming soon</span>
+          <p>
+            Write-ups on SRE, Kubernetes and the things that break in
+            production, plus the projects behind them. Stay tuned.
+          </p>
+        </div>
       </div>
       <Loader type="pacman" />
     </>
